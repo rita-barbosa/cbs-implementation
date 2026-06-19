@@ -1,0 +1,6 @@
+MOKER: EDF-CBS Real-Time Scheduler
+MOKER is a Linux kernel module that implements an Earliest Deadline First (EDF) scheduling algorithm with Constant Bandwidth Server (CBS) for real-time task management in Linux 6.19.9 that supports multiple tasks per server. It provides deadline-based task scheduling using high resolution timers, allowing precise control over task execution timing and resource allocation. The module includes core scheduling logic, run queue management, system call interfaces and tracing support for debugging and performance analysis.
+
+The project is mostly encapsulated in the kernel/moker/ directory as it contains the scheduling class source code however some code is scattered across the kernel.
+
+Of note aswell, this repository does in fact contain the entire source code for the Linux 6.19.9 kernel, this is not (entirely :P) due to convenience/laziness, I wanted to be able to create a patch through the git commits to be able to have my changes be portable, it's also why I squashed the 10 or so commits.
